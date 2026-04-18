@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* { font-family: 'Inter', sans-serif; box-sizing: border-box; }
+body { background: #F1F5F9; color: #0F172A; }
+
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #7C3AED; }
+
+.ticket-id { font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace; }
+
+.card-shadow { box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04); }
+.card-shadow:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1), 0 2px 4px rgba(0,0,0,0.06); }
+
+.btn-gradient {
+  background: linear-gradient(135deg, #0891B2 0%, #7C3AED 60%, #EC4899 100%);
+  box-shadow: 0 2px 12px rgba(124,58,237,0.25);
+  transition: all 0.2s;
+}
+.btn-gradient:hover {
+  box-shadow: 0 4px 20px rgba(124,58,237,0.4);
+  transform: translateY(-1px);
+}
+.btn-gradient:active { transform: translateY(0); }
+
+.sidebar-active {
+  background: rgba(255,255,255,0.12);
+  border-left: 3px solid #22D3EE;
+}
+
+.drag-active {
+  box-shadow: 0 8px 30px rgba(124,58,237,0.3);
+  transform: rotate(1.5deg) scale(1.02);
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.slide-in-right {
+  animation: slideInRight 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.premium-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: #ffffff;
+}
+.premium-card:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 12px 30px -10px rgba(124, 58, 237, 0.25);
+  border-color: rgba(124, 58, 237, 0.3) !important;
+}
